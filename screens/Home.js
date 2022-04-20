@@ -26,40 +26,18 @@ export default class HomeScreen extends Component {
   }
 
   getArticle = () => {
-    const url = this.state.ngrok_url + "/get-article";
-    axios
-      .get(url)
-      .then((response) => {
-        let details = response.data.data;
-        this.setState({ articleDetails: details });
-      })
-      .catch((error) => {
-        console.log(error.message);
-      });
+    /*Complete the getArticle() function.*/
+
   };
 
   likedArticle = () => {
-    const url = this.state.ngrok_url + "/liked-article";
-    axios
-      .get(url)
-      .then((response) => {
-        this.getArticle();
-      })
-      .catch((error) => {
-        console.log(error.message);
-      });
+    /*Complete the likedArticle() function.*/
+
   };
 
   unlikedArticle = () => {
-    const url = this.state.ngrok_url + "/unliked-article";
-    axios
-      .get(url)
-      .then((response) => {
-        this.getArticle();
-      })
-      .catch((error) => {
-        console.log(error.message);
-      });
+    /*Complete the getArticle() function.*/
+
   };
 
   render() {
@@ -87,7 +65,8 @@ export default class HomeScreen extends Component {
             </View>
 
             <View style={styles.subContainer}>
-              <WebView source={{ uri: url }} />
+              {/* Add WebView component here to show the article url*/}
+              
 
               <View style={styles.iconButtonContainer}>
                 <TouchableOpacity onPress={this.likedArticle}>
@@ -108,7 +87,19 @@ export default class HomeScreen extends Component {
         </View>
       );
     } else {
-      return <Text>Loading...</Text>;
+      return (
+        <View style={styles.container}>
+          <ImageBackground
+            source={require("../assets/bg.png")}
+            style={{ flex: 1 }}
+          >
+            <View style={styles.headerContainer}>
+              <Text style={styles.headerTitle}>Articles to Read</Text>
+            </View>
+            <Text style={styles.headerTitle}>Loading...</Text>
+          </ImageBackground>
+        </View>
+      );
     }
   }
 }

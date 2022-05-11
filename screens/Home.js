@@ -26,17 +26,17 @@ export default class HomeScreen extends Component {
   }
 
   getArticle = () => {
-    /*Complete the getArticle() function.*/
+    /*Completa la función getArticle().*/
 
   };
 
   likedArticle = () => {
-    /*Complete the likedArticle() function.*/
+    /*Completa la función likedArticle().*/
 
   };
 
   unlikedArticle = () => {
-    /*Complete the getArticle() function.*/
+    /*Completa la función getArticle().*/
 
   };
 
@@ -51,7 +51,7 @@ export default class HomeScreen extends Component {
             style={{ flex: 1 }}
           >
             <View style={styles.headerContainer}>
-              <Text style={styles.headerTitle}>Articles to Read</Text>
+              <Text style={styles.headerTitle}>Artículos para leer</Text>
               <Icon
                 name="chevron-right"
                 type="feather"
@@ -65,7 +65,7 @@ export default class HomeScreen extends Component {
             </View>
 
             <View style={styles.subContainer}>
-              {/* Add WebView component here to show the article url*/}
+              {/* Agregar componente WebView aquí para mostrar la url del artículo*/}
               
 
               <View style={styles.iconButtonContainer}>
@@ -94,9 +94,9 @@ export default class HomeScreen extends Component {
             style={{ flex: 1 }}
           >
             <View style={styles.headerContainer}>
-              <Text style={styles.headerTitle}>Articles to Read</Text>
+              <Text style={styles.headerTitle}>Artículos para leer</Text>
             </View>
-            <Text style={styles.headerTitle}>Loading...</Text>
+            <Text style={styles.headerTitle}>Cargando...</Text>
           </ImageBackground>
         </View>
       );

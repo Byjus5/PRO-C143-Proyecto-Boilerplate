@@ -65,7 +65,7 @@ export default class HomeScreen extends Component {
             </View>
 
             <View style={styles.subContainer}>
-              {/* Agregar componente WebView aquí para mostrar la url del artículo*/}
+              {/* Agregar el componente WebView aquí para mostrar la url del artículo*/}
               
 
               <View style={styles.iconButtonContainer}>
